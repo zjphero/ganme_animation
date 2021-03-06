@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			
+			#dd{
+				width: 500px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				background-color: #ccc;
+				border-radius: 20px;
+				box-shadow: 0 0 10px #CCCCCC;
+			}
+			
+			#d1{
+				width: 500px;
+				height: 180px;
+				/* border: 1px solid #ccc; */
+				background-image: url(./img/火影忍者完整素材包-螺旋丸_爱给网_aigei_com.png);
+				background-size: auto;
+				line-height: 180px;
+
+				position: absolute;
+				left: 0px;
+				top: 25px;
+				transition: all 0.5s;
+				animation: mingren 1s steps(2) infinite;
+				
+			}
+			@keyframes mingren{
+				from{}
+				to{
+					background-position: 0 -384px;
+				}
+			}
+			@keyframes lxw{
+				from{
+					background-position: 0 0;
+				}
+				
+				to{
+					background-position: 0 -3072px;
+				}
+			}
+			
+			#d2{
+				width: 500px;
+				height: 180px;
+				
+				/* border: 1px solid #ccc; */
+				background-image: url(./img/火影忍者完整素材包-千鸟_爱给网_aigei_com.png);
+				background-size: auto;
+				position: absolute;
+				left: 65px;
+				top: 105px;
+				transition: all 1s;
+				animation: zuozhu1 1s steps(2) infinite;
+				
+			}
+			@keyframes zuozhu1{
+				from{}
+				to{
+					background-position: 0 -384px;
+				}
+			}
+			@keyframes qn{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position: 0 -2496px;
+				}
+			}
+			#d3{
+				width: 500px;
+				height: 180px;
+				
+				/* border: 1px solid #ccc; */
+				background-image: url(./img/火影忍者-全动画鲁鲁版-雷炎剑_爱给网_aigei_com.png);
+				background-size: auto;
+
+				position: absolute;
+				left: 24px;
+				top: -9px;
+				transition: all 1s;
+				visibility: hidden;
+				
+			}
+			
+			@keyframes lyj{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position: 0 -4416px;
+				}
+			}
+
+			#mingren:checked~#d1{
+				
+				transform: translateX(100px);
+				animation: lxw 1.5s steps(16) infinite;
+				z-index: 1;
+			}
+			#zuozhu:checked~#d2{
+				
+				transform: translateX(-50px);
+				animation: qn 1.5s steps(13) infinite;
+				z-index: 1;
+			}
+			#zuozhu:checked~#d3{
+				
+				transform: translateX(10px);
+				animation: lyj 1.5s steps(23) infinite;
+				z-index: 1;
+				visibility: visible;
+			}
+			#mingren:checked~#d4{
+				animation: zuozulife 1.5s infinite 0.5s;
+			}
+			#zuozhu:checked~#d5{
+				animation: mingrenlife 1.5s infinite 0.5s;
+			}
+			
+			
+			#dd #btn{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				background-color: aliceblue;
+				border: #999999 1px solid;
+				border-radius: 8px;
+				position: absolute;
+				left: 0;
+				top: -100px;
+			}
+	
+			#btnqn{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				background-color: aliceblue;
+				border: #999999 1px solid;
+				border-radius: 8px;
+				position: absolute;
+				left: 400px;
+				top: -100px;
+			}
+			#dd #btn:hover{
+				box-shadow: 0 0 10px #999;
+			}
+			#dd #btnqn:hover{
+				box-shadow: 0 0 10px #999;
+			}
+			
+			
+			#d4{
+				color: red;
+				width: 200px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 100;
+				position: absolute;
+				left: 200px;
+				top: 90px;
+				opacity: 0;
+				
+				
+				/* animation: life 1s infinite; */
+			}
+			@keyframes zuozulife{
+				from{
+					
+				}
+				to{
+					transform: translateY(-40px);
+					font-weight: 900;
+					opacity: 1;
+				}
+			}
+			#d5{
+				color: red;
+				width: 200px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 100;
+				position: absolute;
+				left: 7px;
+				top: 75px;
+				opacity: 0;
+				
+				/* animation: life 1s infinite; */
+			}
+			@keyframes mingrenlife{
+				from{
+					
+				}
+				to{
+					transform: translateY(-40px);
+					font-weight: 900;
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dd">
+			
+			<label id="btn" for="mingren">螺旋丸</label>
+			
+			<label id="btnqn" for="zuozhu">千鸟+雷炎剑</label>
+			<label id="btnqn" for="zuozhu">千鸟+雷炎剑</label>
+			<input type="radio" name="jineng" id="mingren" value="螺旋丸" hidden="hidden"/>
+			<input type="radio" name="jineng" id="zuozhu" value="千鸟" hidden="hidden"/>
+			<input type="radio" name="jineng" id="zuozhu" value="雷炎剑" hidden="hidden"/>
+			<input type="radio" name="jineng" id="mingren" value="佐助血量" hidden="hidden"/>
+			<input type="radio" name="jineng" id="zuozhu" value="鸣人血量" hidden="hidden"/>
+			<div id="d1"></div>
+			<div id="d2"></div>
+			<div id="d3"></div>
+			<div id="d4">-1000</div>
+			<div id="d5">-1000</div>
+		</div>
+		
+		
+	</body>
+</html>
